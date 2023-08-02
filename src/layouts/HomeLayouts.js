@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import NewTaskAddInput from '../components/NewTaskAddInput'
 import TaskList from './homeLayouts/TaskList'
 
-// const taskList = ['Task1', 'Task2', 'Task3'];
+const taskList = ['Task1', 'Task2', 'Task3'];
 
 
 export default class HomeLayouts extends Component {
@@ -12,7 +12,7 @@ export default class HomeLayouts extends Component {
                 <div>
                     <NewTaskAddInput />
                     <div style={{ marginTop: '50px' }}>
-                        <TaskList  />
+                        <TaskList taskListData={taskList} />
                     </div>
                 </div>
             </div>
