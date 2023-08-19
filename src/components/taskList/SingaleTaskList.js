@@ -2,8 +2,13 @@ import React, { Component } from 'react'
 
 export default class SingaleTaskList extends Component {
   render() {
+    const {title} = this.props;
     return (
-      <div>SingaleTaskList</div>
+      <div>
+        <p>
+          {title}
+        </p>
+      </div>
     )
   }
 }

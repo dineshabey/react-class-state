@@ -7,7 +7,11 @@ export default class TaskList extends Component {
         console.log(taskListData)
         return (
             <div>
-                <SingaleTaskList />
+
+                {taskListData.map((val, key) => {
+                    return (<SingaleTaskList key={key} title={val} />)
+                })}
+
             </div>
         )
     }
