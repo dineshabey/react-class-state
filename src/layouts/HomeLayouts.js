@@ -19,7 +19,7 @@ export default class HomeLayouts extends Component {
 
     addNewTask = () => {
         this.setState({
-             taskListData:[this.state.taskListData],
+             taskListData:[...this.state.taskListData,'New Task'],
         });
     }
 
