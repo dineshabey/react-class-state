@@ -23,10 +23,7 @@ export default class HomeLayouts extends Component {
         });
     }
 
-
-
     render() {
-
         return (
             <div style={{ display: 'flex', justifyContent: 'center', margin: '20px' }}>
                 <div>
