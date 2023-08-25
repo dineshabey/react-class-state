@@ -22,6 +22,8 @@ export default class NewTaskAddInput extends Component {
     const { inputValue } = this.state;
     if (inputValue.trim()) {
       this.props.addNewTask(this.state.inputValue)
+      this.setState({ inputValue: '' });
+
     } else {
       this.setState({
         isError: true
