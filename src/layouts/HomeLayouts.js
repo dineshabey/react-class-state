@@ -17,19 +17,21 @@ export default class HomeLayouts extends Component {
         }
     }
 
-    addNewTask = () => {
+    addNewTask = (addNewTask) => {
         this.setState({
-             taskListData:[...this.state.taskListData,'New Task'],
+            taskListData: [addNewTask, ...this.state.taskListData],
         });
     }
 
 
+
     render() {
+
         return (
             <div style={{ display: 'flex', justifyContent: 'center', margin: '20px' }}>
                 <div>
-                    {/* <NewTaskAddInput /> */}
-                    <button onClick={this.addNewTask}>Add New Task</button>
+                    <NewTaskAddInput addNewTask={this.addNewTask} />
+                    {/* <button onClick={this.addNewTask}>Add New Task</button> */}
                     <div style={{ marginTop: '50px' }}>
                         <TaskList taskListData={this.state.taskListData} />
                     </div>

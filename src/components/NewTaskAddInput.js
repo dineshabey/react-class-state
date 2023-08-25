@@ -11,10 +11,14 @@ export default class NewTaskAddInput extends Component {
   };
 
   render() {
+    const { addNewTask } = this.props;
+
     return (
       <div>
         <input onChange={this.handleInputValueChange} type='text' style={{ fontSize: '20px' }}></input>
-        <button style={{ fontSize: '20px' }}>Add</button>
+        <button onClick={addNewTask} style={{ fontSize: '20px' }}>
+          {''}
+          Add</button>
       </div>
     )
   }
