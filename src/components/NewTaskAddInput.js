@@ -9,6 +9,11 @@ export default class NewTaskAddInput extends Component {
 
   handleInputValueChange = (e) => {
     // console.log(e.target.value); 
+    const { value } = e.target;
+    if (value.trim()) {
+      this.setState({ isError: false });
+    } else {
+    }
     this.setState({ inputValue: e.target.value });
   };
 
@@ -25,11 +30,10 @@ export default class NewTaskAddInput extends Component {
   }
 
   render() {
-    const { addNewTask } = this.props;
 
     return (
       <div>
-        <input onChange={this.handleInputValueChange} type='text' style={{ fontSize: '20px' }}></input>
+        <input onChange={this.handleInputValueChange} value={this.state.inputValue} type='text' style={{ fontSize: '20px' }}></input>
         <button onClick={this.handdleAddNewTask} style={{ fontSize: '20px' }}>
           {''}
           Add</button>
