@@ -29,7 +29,7 @@ export default class HomeLayouts extends Component {
     //number counter function
     addCount = () => {
         this.setState({
-            numberCount: 100,
+            numberCount: this.state.numberCount + 1,
         });
     }
 
