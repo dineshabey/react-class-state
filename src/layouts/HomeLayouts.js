@@ -7,13 +7,16 @@ import TaskList from './homeLayouts/TaskList'
 
 export default class HomeLayouts extends Component {
     state = {
-        taskListData: [],
+        // taskListData: [],
+
     }
 
     constructor() {
         super();
         this.state = {
-            taskListData: ['Task1', 'Task2', 'Task3']
+            taskListData: ['Task1', 'Task2', 'Task3'],
+            numberCount: 1, //create number count variyable
+
         }
     }
 
@@ -23,10 +26,22 @@ export default class HomeLayouts extends Component {
         });
     }
 
+    //number counter function
+    addCount = () => {
+        this.setState({
+            numberCount: 100,
+        });
+    }
+
     render() {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', margin: '20px' }}>
                 <div>
+                    <p style={{ fontSize: '40px' }}>{this.state.numberCount}</p>
+                    <button onClick={this.addCount}>Add One</button>
+                    <br />
+                    <br />
+
                     <NewTaskAddInput addNewTask={this.addNewTask} />
                     {/* <button onClick={this.addNewTask}>Add New Task</button> */}
                     <div style={{ marginTop: '50px' }}>
